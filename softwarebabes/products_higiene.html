@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="AlertifyJS/alertify.js">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" 
+    crossorigin="anonymous">
+    <title>Productes d'higiène</title>
+
+</head>
+<body>
+
+    <header id="main-header">
+
+        <a id="logo-header" href="./main.html">
+            
+            <img src="./img/Logo_Software Babes.png" alt="">
+
+        </a>
+
+        <nav>
+			<ul>
+				<li class="searchbar">
+                    <input class="p-1" type="text" name="search" placeholder="Search..." style="height: 30px;">
+                    <a onclick="showError()">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);" width="24" height="24" viewBox="0 0 24 24" 
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        
+                    </a>
+                </li>
+				<li class="cart">
+                    <a href="./shoppingCart.html"><img src="./img/carrito.png" alt="" width="40px" HSPACE="30"></a>
+                </li>
+				<li class="profile">
+                    <a href="./profile.html"><img src="./img/profile.png" alt="" width="40px" HSPACE="30"></a>
+                </li>
+                <li>
+                    <div class="menu">
+                        <input type="checkbox" id="menu">
+                        <label for="menu"> ☰ </label>
+                    <ul>
+                        <li><a href="./profile.html"></a>Perfil</li>
+                        <li><a href="./shoppingCart.html"></a>Carrito compra</li>
+                    </ul>
+                    </div>
+                </li>
+			</ul>
+        </nav>
+    </header>
+
+    <div class="row" style="text-align: center;" id="products">
+        <div class="col-4" id="image1">
+            <h2>Cambiador per nens</h2>
+            <img src="./img/higiene1.png" onclick="showMessage()" alt="">
+            <p>
+                El canviador BOKSI Baby Care Station de la marca Nannak.
+                Aquesta idea neix de conjugar els requisits i l'exigència dels centres 
+                infantils amb les necessitats i les característiques de l'ús domèstic.
+            </p>
+            <h2>110.9€</h2>
+        </div>
+        <div class="col-4" id="image2">
+            <h2>Kit de Bany</h2>
+            <img src="./img/higiene2.png" onclick="showMessage()" alt="">
+            <p>
+                Amb el Kit Baby Bagno dotat de 2 seients anatòmics y gomas antilliscants, 
+                espai pel sabó i l'esponja, dutxa, tap i tub per extreure l'aigua, calaix porta-objectes. 
+                Plegat compacte.
+            </p>
+            <h2>100€</h2>
+        </div>
+        <div class="col-4" id="image3">
+            <h2>Vela cera natural</h2>
+            <img src="./img/higiene3.png" onclick="showMessage()" alt="">
+            <p>
+                La fragància emergeix sobre un acord lluminós de notori coco i karité, associades a delicades notes de Grasse. 
+                Una barreja d'il·lusió, tendresa i amor per crear una atmosfera que transporta a la calidesa d'una pell de bebè. 
+                Un toc perfecte a la vostra habitació.
+
+            </p>
+            <h2>10€</h2>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+
+            swal({
+                title: "Estàs segur que vol realitzar la compra?",
+                text: "Una vegada confirmada, s'afegirà a la cistella.",
+                buttons: {
+                    cancel: "No",
+                    catch: {
+                        text: "Si",
+                        value: "confirm",
+                    },
+                },
+            })
+
+            .then((value => {
+
+                switch(value) {
+                    
+                    case "confirm":
+
+                        swal("Has afegit el producte a la cistella", "" ,"success");
+                        break;
+
+                    default:
+
+                        swal("No has afegit el producte a la cistella", "" ,"error");
+                        break;
+                }
+            }
+            ))
+        }
+
+        function showError() {
+            swal("No s'ha trobat el producte", "", "error")
+        }
+
+    </script>
+
+</body>
+</html>

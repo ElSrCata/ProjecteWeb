@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Pàgina Principal</title>
+    <script src="./javascript/scripts.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" 
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <header id="main-header">
+
+        <a id="logo-header" href="#">
+            
+            <img src="./img/Logo_Software Babes.png" alt="">
+
+        </a>
+
+        <nav>
+			<ul>
+				<li class="searchbar">
+                    <input class="p-1" type="text" name="search" placeholder="Search..." style="height: 30px;">
+                    <a onclick="showError()">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);" width="24" height="24" viewBox="0 0 24 24" 
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        
+                    </a>
+                </li>
+				<li class="cart">
+                    <a href="./shoppingCart.html"><img src="./img/carrito.png" alt="" width="40px" HSPACE="30"></a>
+                </li>
+				<li class="profile">
+                    <a href="./profile.html"><img src="./img/profile.png" alt="" width="40px" HSPACE="30"></a>
+                </li>
+                <li>
+                    <div class="menu">
+                        <input type="checkbox" id="menu">
+                        <label for="menu"> ☰ </label>
+                    <ul>
+                        <li><a href="./profile.html">Perfil</a></li>
+                        <li><a href="./shoppingCart.html">Carrito compra</a></li>
+                    </ul>
+                    </div>
+                </li>
+			</ul>
+        </nav>
+    </header>
+
+   <div class="slides">
+        <div class="slide">
+            <img class="slide_img" src="./img/baby.jpg" alt="">
+        </div>
+        <div class="slide slide_two">
+            <img class="slide_img" src="./img/toys.jpg" alt="">
+        </div>
+        <div class="slide slide_threee">
+            <img class="slide_img" src="./img/babyClothes.jpg" alt="">
+        </div>
+   </div>
+
+   <br>
+
+    <section class="options">
+
+        <div class="higiene">
+            <a href="./products_higiene.html">
+                <img src="./img/higiene_option.png" width="300px" alt="">
+            </a>  
+        </div>
+        <div class="clothes">
+            <a href="./products_clothes.html">
+                <img src="./img/clothes_option.png" width="300px" alt="">
+            </a>
+        </div>
+        <div class="toys">
+            <a href="./products_toys.html">
+                <img src="./img/toys_option.png" width="340px" alt="">
+            </a>
+        </div>
+    </section> 
+
+    <script>
+        function showError() {
+            swal("No s'ha trobat el producte", "", "error")
+        }
+    </script>
+</body>
+</html>
